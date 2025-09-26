@@ -18,24 +18,24 @@
   </main>
 
   <script>
-    function scrapeSite() {
-      const site = document.getElementById('site-input').value;
-      fetch(`https://your-backend-url.com/scrape?url=${encodeURIComponent(site)}`)
-        .then(res => res.json())
-        .then(data => {
-          const list = document.getElementById('pdf-list');
-          list.innerHTML = '';
-          data.forEach(pdf => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="${pdf.url}" target="_blank">${pdf.title}</a>`;
-            list.appendChild(li);
-          });
-        })
-        .catch(err => {
-          console.error(err);
-          document.getElementById('pdf-list').innerText = 'Error scraping site.';
+  function scrapeSite() {
+    const site = document.getElementById('site-input').value;
+    fetch(`https://PdfLinkScraper.elimuhubconsult.repl.co/scrape?url=${encodeURIComponent(site)}`)
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('pdf-list');
+        list.innerHTML = '';
+        data.forEach(pdf => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${pdf.url}" target="_blank">${pdf.title}</a>`;
+          list.appendChild(li);
         });
-    }
-  </script>
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('pdf-list').innerText = 'Error scraping site.';
+      });
+  }
+</script>
 </body>
 </html>

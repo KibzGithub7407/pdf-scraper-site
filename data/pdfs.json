@@ -1,1 +1,15 @@
 
+[
+  {
+    "title": "School Prospectus",
+    "url": "https://example.com/files/prospectus.pdf"
+  },
+  {
+    "title": "Fee Structure",
+    "url": "https://example.com/files/fees.pdf"
+  },
+  {
+    "title": "Admission Form",
+    "url": "https://example.com/files/admission.pdf"
+  }
+]
